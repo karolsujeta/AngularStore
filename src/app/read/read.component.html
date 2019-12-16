@@ -1,0 +1,10 @@
+<div class="right" *ngIf="stores">
+
+    <h3>Stores</h3>
+    <ul>
+        <li (click)=delStore(i) *ngFor="let store of stores | async; let i =index">
+            <a [href]="store.url" target="_blank">{{ store.name }}</a>
+        </li>
+    </ul>
+
+</div>
